@@ -308,7 +308,7 @@ body {
 }
 .banner_content-right img {
   position: absolute;
-  top: -36%;
+  top: -31%;
 }
 @media (max-width: 767px) {
   .banner {
