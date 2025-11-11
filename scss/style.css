@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -662,11 +663,48 @@ body {
   justify-content: center;
   gap: 20px;
 }
+.contact_content-form .wrap-input .select-box {
+  position: relative;
+  width: 50%;
+  /* icon mũi tên */
+}
+.contact_content-form .wrap-input .select-box select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+.contact_content-form .wrap-input .select-box select:focus {
+  border-color: #41a348;
+  outline: none;
+}
+.contact_content-form .wrap-input .select-box::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 37%;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
 .contact_content-form .wrap-input input {
   width: 50%;
 }
 .contact_content-form input,
-.contact_content-form textarea {
+.contact_content-form textarea,
+.contact_content-form select {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
@@ -677,20 +715,24 @@ body {
   resize: none;
 }
 .contact_content-form input:focus,
-.contact_content-form textarea:focus {
+.contact_content-form textarea:focus,
+.contact_content-form select:focus {
   border: none;
   outline: none;
 }
-.contact_content-form input::-moz-placeholder, .contact_content-form textarea::-moz-placeholder {
+.contact_content-form input::-moz-placeholder, .contact_content-form textarea::-moz-placeholder, .contact_content-form select::-moz-placeholder {
   font-family: "Nunito", sans-serif;
   color: #1a1a1a;
   font-size: 15px;
+  background: #fff;
 }
 .contact_content-form input::placeholder,
-.contact_content-form textarea::placeholder {
+.contact_content-form textarea::placeholder,
+.contact_content-form select::placeholder {
   font-family: "Nunito", sans-serif;
   color: #1a1a1a;
   font-size: 15px;
+  background: #fff;
 }
 .contact_content-form textarea {
   height: 150px;
@@ -736,8 +778,12 @@ body {
   .contact_content-form .wrap-input input {
     width: 100%;
   }
+  .contact_content-form .wrap-input .select-box {
+    width: 100%;
+  }
   .contact_content-form input,
-  .contact_content-form textarea {
+  .contact_content-form textarea,
+  .contact_content-form select {
     margin-bottom: 10px;
   }
 }
